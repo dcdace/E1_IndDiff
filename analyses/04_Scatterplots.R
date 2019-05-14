@@ -6,7 +6,7 @@ library(ggExtra)
 library(cowplot)
 
 # import the data
-E1data = read.csv("D:/_CogNeurPhD/01-Experiment/E1cleaned.csv")
+E1data = read.csv("E1cleaned.csv")
 # ==================================================================
 # CALCULATE NECCESSARY VARIABLES
 # ==================================================================
