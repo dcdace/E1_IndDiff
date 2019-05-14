@@ -29,9 +29,6 @@ group <- as.factor(E1data$group)
 minV <- round(min(c(min(ssLearning), min(gsLearning))))
 maxV <- round(max(c(max(ssLearning), max(gsLearning))))
 
-
-# ==================================================================
-# FLUID INTELLIGENCE PLOT
 # ==================================================================
 
 #xvar <- E1data$ETppDiff * 100
@@ -41,7 +38,6 @@ yvar <- E1data$WM
 #yvar <- E1data$ETPre
 
 xy <- data.frame(xvar, yvar, group)
-
 
 #scatterplot of x and y variables
 scatter <- ggplot(xy, aes(xvar, yvar)) +
@@ -81,8 +77,6 @@ scatter <- ggplot(xy, aes(xvar, yvar)) +
     text = element_text(size = 30)
   )
 
-
-
 # Marginal densities along x axis
 xdens <- axis_canvas(scatter, axis = "x") +
   geom_density(
@@ -92,7 +86,6 @@ xdens <- axis_canvas(scatter, axis = "x") +
     size = 1
   ) +
   scale_fill_manual(values = c('#999999', '#E69F00'))
-
 
 # Marginal densities along y axis
 # Need to set coord_flip = TRUE, if you plan to use coord_flip()
